@@ -171,3 +171,49 @@ body {
 .flex-nowrap {
   flex-wrap: nowrap;
 }
+/* TOP NAVIGATION MENU */
+nav {
+  background: #D3A1F5;
+  display: flex;
+  justify-content: flexstart;
+  align-items: center;
+  height: 5rem;
+  padding-left: 3.5rem;
+}
+nav a {
+  padding: 0 3rem;
+  text-decoration: none;
+  color: #fafafa;
+  font-weight: 300;
+  font-size: 1.4rem;
+  transition-duration: 200ms;
+}
+nav a:hover {
+  transition-property: color;
+  color: #ececec;
+}
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+header img {
+  width: 500px;
+}
+header .logo {
+  font-size: 7rem;
+  font-weight: 700;
+  color: #945FCD;
+  margin-top: 10%;
+}
+header .tagline {
+  font-size: 3rem;
+  margin-top: 1.7rem;
+}
+/* Main Content */
+.container {
+  margin: 0 auto;
+  width: 80%;
+}

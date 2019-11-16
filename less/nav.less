@@ -1,0 +1,22 @@
+/* TOP NAVIGATION MENU */
+
+nav {
+    background: @secondary;
+    .flex-row(flexstart, center);
+    height: 5rem;
+    padding-left: 3.5rem;
+
+    a { // nav link styling
+        padding: 0 3rem;
+        text-decoration: none;
+        color: #fafafa;
+        font-weight: @light;
+        font-size: 1.4rem;
+        transition-duration: 200ms;
+
+        &:hover {
+            transition-property: color;
+            color: rgb(236, 236, 236);
+        }
+    }
+}
