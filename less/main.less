@@ -28,7 +28,7 @@
 
     .col50 {
       width: 50%;
-      .flex-row(center, center);
+      .flex-col(center, flex-start);
       border: 1px solid red;
 
       img {
@@ -37,8 +37,31 @@
 
       p {
         width: 100%;
+        margin: 0;
       }
     }
+  }
+}
+
+.bottom-content {
+  padding: 5rem;
+  width: 90%;
+  border-radius: 5px;
+  margin-bottom: 5rem;
+  .flex-col(center, center);
+
+  h3 {
+    font-size: 3.5rem;
+    font-weight: @light;
+    margin: 20rem 0 5rem;
+    text-align: center;
+  }
+
+  p {
+    font-size: 2rem;
+    font-weight: @light;
+    line-height: 4rem;
+    margin: 1rem 0;
   }
 }
 
@@ -59,5 +82,30 @@
 
   ul li {
     .flex-row(flex-start, center);
+  }
+}
+
+// Buttons
+.footer-cta-button {
+  margin-bottom: 2rem;
+  border-radius: 5px;
+  background: #3c1e76;
+  height: 7rem;
+  width: 40%;
+  font-weight: @medium;
+  font-size: 3rem;
+  text-align: center;
+  .flex-row(center, center);
+  transition-duration: 300ms;
+  border: 1px solid #291262;
+
+  &:hover {
+    transition-property: background;
+    background: #291262;
+  }
+
+  a {
+    color: #fafafa;
+    text-decoration: none;
   }
 }
