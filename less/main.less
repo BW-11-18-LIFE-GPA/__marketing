@@ -93,6 +93,22 @@
   background: #fafafa;
   border-radius: 5px;
 
+  @media @desktop {
+    font-size: 2rem;
+    width: 100%;
+    margin: 0;
+    margin-top: 3rem;
+    line-height: 2rem;
+  }
+
+  @media @tablet {
+    font-size: 1.5rem;
+    width: 100%;
+    margin: 0;
+    margin-top: 3rem;
+    line-height: 2rem;
+  }
+
   @media @phone {
     font-size: 1.5rem;
     width: 100%;
@@ -103,6 +119,33 @@
 
   ul li {
     .flex-row(flex-start, center);
+
+    @media @desktop {
+      border-bottom: 1px dashed #444444;
+      margin-bottom: 2rem;
+      padding-bottom: 2rem;
+      line-height: 4rem;
+
+      &:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+
+      i {
+        margin-right: 1rem;
+      }
+    }
+
+    @media @tablet {
+      border-bottom: 1px dashed #444444;
+      margin-bottom: 2rem;
+      padding-bottom: 2rem;
+
+      &:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+    }
 
     @media @phone {
       border-bottom: 1px dashed #444444;
@@ -133,6 +176,10 @@
   .flex-row(center, center);
   transition-duration: 300ms;
   border: 1px solid #291262;
+
+  @media @tablet {
+    width: 100%;
+  }
 
   @media @phone {
     width: 100%;
