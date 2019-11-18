@@ -1,0 +1,111 @@
+/* Main Content */
+
+.container {
+  margin: 0 auto;
+  width: 80%;
+  .flex-row(center, flex-start);
+  .flex-wrap();
+
+  .content-block {
+    padding: 5rem;
+    width: 90%;
+    background: #ecf0f1;
+    border-radius: 5px;
+    margin-bottom: 5rem;
+
+    h3 {
+      font-size: 3.5rem;
+      font-weight: @light;
+      margin-bottom: 2rem;
+    }
+
+    p {
+      font-size: 2rem;
+      font-weight: @light;
+      line-height: 4rem;
+      margin: 1rem 0;
+    }
+
+    .col50 {
+      width: 50%;
+      .flex-col(center, flex-start);
+      border: 1px solid red;
+
+      img {
+        width: 100%;
+      }
+
+      p {
+        width: 100%;
+        margin: 0;
+      }
+    }
+  }
+}
+
+.bottom-content {
+  padding: 5rem;
+  width: 90%;
+  border-radius: 5px;
+  margin-bottom: 5rem;
+  .flex-col(center, center);
+
+  h3 {
+    font-size: 4.5rem;
+    font-weight: @light;
+    margin: 10rem 0 5rem;
+    text-align: center;
+  }
+
+  p {
+    font-size: 2rem;
+    font-weight: @light;
+    line-height: 4rem;
+    margin: 1rem 0;
+  }
+}
+
+// Some structural classes
+.twoCol {
+  .flex-row(center, center);
+}
+
+// how-to list
+.how-to {
+  font-size: 2.5rem;
+  font-weight: @light;
+  line-height: 6rem;
+  margin: 5rem 5%;
+  padding: 2% 5%;
+  background: #fafafa;
+  border-radius: 5px;
+
+  ul li {
+    .flex-row(flex-start, center);
+  }
+}
+
+// Buttons
+.footer-cta-button {
+  margin-bottom: 2rem;
+  border-radius: 5px;
+  background: #3c1e76;
+  height: 7rem;
+  width: 40%;
+  font-weight: @medium;
+  font-size: 3rem;
+  text-align: center;
+  .flex-row(center, center);
+  transition-duration: 300ms;
+  border: 1px solid #291262;
+
+  &:hover {
+    transition-property: background;
+    background: #291262;
+  }
+
+  a {
+    color: #fafafa;
+    text-decoration: none;
+  }
+}
