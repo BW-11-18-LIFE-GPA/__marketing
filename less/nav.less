@@ -18,13 +18,16 @@ nav {
       padding-left: 0;
     }
 
-    // nav link styling
-    padding: 0 5rem;
+    padding: 0 5%;
     text-decoration: none;
     color: #fafafa;
     font-weight: @light;
     font-size: 1.6rem;
     transition-duration: 200ms;
+
+    @media @phone {
+      padding: 0 10%;
+    }
 
     &:hover {
       transition-property: color;

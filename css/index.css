@@ -193,7 +193,7 @@ nav .main-nav {
   width: 80%;
 }
 nav a {
-  padding: 0 5rem;
+  padding: 0 5%;
   text-decoration: none;
   color: #fafafa;
   font-weight: 300;
@@ -202,6 +202,11 @@ nav a {
 }
 nav a:first-child {
   padding-left: 0;
+}
+@media (max-width: 500px) {
+  nav a {
+    padding: 0 10%;
+  }
 }
 nav a:hover {
   transition-property: color;
@@ -255,7 +260,13 @@ header .tagline {
   margin-top: 1.7rem;
   color: #444444;
 }
+@media (max-width: 500px) {
+  header .tagline {
+    text-align: center;
+  }
+}
 header .hero-section {
+  padding: 3%;
   margin-top: 5rem;
   width: 90%;
   display: flex;
@@ -264,11 +275,44 @@ header .hero-section {
   background: #fdfcd5;
   border-radius: 5px;
 }
+@media (max-width: 500px) {
+  header .hero-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+}
 header .hero-section img {
   width: 60%;
 }
+@media (max-width: 500px) {
+  header .hero-section img {
+    width: 100%;
+  }
+}
 header .hero-section .side-hero {
   width: 40%;
+}
+@media (max-width: 1284px) {
+  header .hero-section .side-hero div p {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 1100px) {
+  header .hero-section .side-hero div p {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 500px) {
+  header .hero-section .side-hero {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 header .hero-section .side-hero p {
   line-height: 5rem;
@@ -292,6 +336,14 @@ header .hero-section .side-hero .small-text {
   align-items: center;
   font-size: 3rem;
 }
+@media (max-width: 500px) {
+  .hero-icon {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
 .hero-icon p {
   margin-left: 1rem;
 }
@@ -300,6 +352,9 @@ header .hero-section .side-hero .small-text {
 }
 /* Buttons */
 .cta-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 5px;
   background: #6bed90;
   height: 7rem;
@@ -307,11 +362,14 @@ header .hero-section .side-hero .small-text {
   font-weight: 500;
   font-size: 3rem;
   text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   transition-duration: 300ms;
   border: 1px solid #088d63;
+}
+@media (max-width: 1000px) {
+  .cta-button {
+    padding: 0 1.5%;
+    font-size: 2.5rem;
+  }
 }
 .cta-button:hover {
   transition-property: background;
