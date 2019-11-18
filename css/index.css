@@ -349,3 +349,35 @@ header .hero-section .side-hero .small-text {
   justify-content: flex-start;
   align-items: center;
 }
+footer {
+  margin-top: 5rem;
+  color: #ffffff;
+  width: 100%;
+}
+footer .footHead {
+  width: 100%;
+  height: 1.2rem;
+  background: #d3a1f5;
+}
+footer .footContent {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 5%;
+  width: 100%;
+  height: 3rem;
+  background: #444444;
+}
+footer p {
+  line-height: 3rem;
+  font-size: 1.2rem;
+}
+footer a {
+  color: #fafafa;
+  text-decoration: none;
+  transition-duration: 300ms;
+}
+footer a:hover {
+  transition-property: opacity;
+  opacity: 0.85;
+}
