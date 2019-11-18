@@ -3,19 +3,23 @@
 nav {
   width: 100%;
   background: @secondary;
-  .flex-row(flexstart, center);
+  .flex-row(space-around, center);
   height: 5rem;
   padding-left: 3.5rem;
-  // MIGHT ADD THESE BACK IN AT SOME POINT
-  // border-bottom: 1px solid #6F41AC;
-  // border-right: 1px solid #6F41AC;
-  // border-left: 1px solid #6F41AC;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 
+  .main-nav {
+    width: 80%;
+  }
+
   a {
+    &:first-child {
+      padding-left: 0;
+    }
+
     // nav link styling
-    padding: 0 3rem;
+    padding: 0 5rem;
     text-decoration: none;
     color: #fafafa;
     font-weight: @light;
@@ -24,7 +28,29 @@ nav {
 
     &:hover {
       transition-property: color;
-      color: rgb(236, 236, 236);
+      color: rgb(223, 223, 223);
+    }
+  }
+
+  .login {
+    background: @gray-dark;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    height: 3.5rem;
+    line-height: 3.5rem;
+    padding: 0 2rem;
+    margin: 0 5rem;
+    text-align: center;
+    transition-duration: 500ms;
+
+    &:hover {
+      transition-property: background;
+      background: #4e4e4e;
+      color: #fafafa;
+
+      a {
+        color: #fafafa;
+      }
     }
   }
 }
