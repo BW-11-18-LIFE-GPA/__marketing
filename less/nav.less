@@ -1,68 +1,45 @@
 /* TOP NAVIGATION MENU */
 
 nav {
+  .flex-row(flex-start, center);
   width: 100%;
-  background: @secondary;
-  .flex-row(space-around, center);
   height: 5rem;
-  padding-left: 3.5rem;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-
-  @media @phone {
-    min-width: 42rem;
-    height: 10rem;
-  }
-
-  .main-nav {
-    width: 80%;
-
-    @media @phone {
-      .flex-col(flex-start, center);
-    }
-  }
+  background: @secondary;
+  padding-left: 10%;
 
   a {
-    &:first-child {
-      padding-left: 0;
-    }
-
-    padding: 0 5%;
-    text-decoration: none;
     color: #fafafa;
-    font-weight: @light;
+    text-decoration: none;
     font-size: 1.6rem;
-    transition-duration: 200ms;
+    padding: 0 5%;
+    transition-duration: 300ms;
 
-    @media @phone {
-      padding: 1rem 5%;
+    &:last-child {
+      padding: 0;
+      margin: 0 5%;
     }
 
     &:hover {
       transition-property: color;
-      color: rgb(223, 223, 223);
+      color: @gray-dark;
     }
   }
+}
 
-  .login {
-    background: @gray-dark;
-    border-radius: 5px;
-    font-size: 1.6rem;
-    height: 3.5rem;
-    line-height: 3.5rem;
-    padding: 0 2rem;
-    margin: 0 5rem;
-    text-align: center;
-    transition-duration: 500ms;
+/* Buttons */
+.login {
+  background: @gray-dark;
+  height: 3rem;
+  width: 10rem;
+  min-width: 8rem;
+  line-height: 3rem;
+  border-radius: 5px;
+  text-align: center;
+  transition-duration: 300ms;
 
-    &:hover {
-      transition-property: background;
-      background: #4e4e4e;
-      color: #fafafa;
-
-      a {
-        color: #fafafa;
-      }
-    }
+  &:hover {
+    transition-property: background, color;
+    background: #444444;
+    color: #fafafa;
   }
 }
