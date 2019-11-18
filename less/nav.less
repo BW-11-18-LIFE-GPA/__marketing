@@ -9,8 +9,17 @@ nav {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 
+  @media @phone {
+    min-width: 42rem;
+    height: 10rem;
+  }
+
   .main-nav {
     width: 80%;
+
+    @media @phone {
+      .flex-col(flex-start, center);
+    }
   }
 
   a {
@@ -26,7 +35,7 @@ nav {
     transition-duration: 200ms;
 
     @media @phone {
-      padding: 0 10%;
+      padding: 1rem 5%;
     }
 
     &:hover {
