@@ -1,11 +1,23 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+
+  @media @darkmode {
+    background: #1b1b1b;
+  }
 }
 
 html,
 body {
   font-family: @font-stack;
+}
+
+body {
+  @media @darkmode {
+    img {
+      opacity: 0.9;
+    }
+  }
 }
 
 .content-sep {
@@ -14,4 +26,8 @@ body {
   border-bottom: 0.5rem solid @gray-dark;
   border-radius: 5px;
   width: 100%;
+
+  @media @darkmode {
+    opacity: 0.8;
+  }
 }

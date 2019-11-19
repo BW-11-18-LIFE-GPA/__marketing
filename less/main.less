@@ -13,6 +13,10 @@
     border-radius: 5px;
     margin-bottom: 5rem;
 
+    @media @darkmode {
+      opacity: 0.8;
+    }
+
     h3 {
       font-size: 3.5rem;
       font-weight: @light;
@@ -50,6 +54,10 @@
     margin: 10rem 0 5rem;
     text-align: center;
 
+    @media @darkmode {
+      color: #c4c4c4;
+    }
+
     @media @phone {
       font-size: 3rem;
     }
@@ -77,6 +85,10 @@
   padding: 2% 5%;
   background: #fafafa;
   border-radius: 5px;
+
+  @media @darkmode {
+    opacity: 0.8;
+  }
 
   @media @desktop {
     font-size: 2rem;
@@ -172,7 +184,6 @@
   text-align: center;
   .flex-row(center, center);
   transition-duration: 300ms;
-  // border: 1px solid #291262;
   border: 1px solid @primary-border;
 
   @media @tablet {
@@ -191,5 +202,9 @@
   a {
     color: #fafafa;
     text-decoration: none;
+
+    @media @darkmode {
+      color: #c4c4c4;
+    }
   }
 }
