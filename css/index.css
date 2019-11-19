@@ -540,6 +540,18 @@ header .hero-section .side-hero .small-text {
     margin-right: 1rem;
   }
 }
+@media (max-width: 1310px) {
+  .how-to ul li {
+    border-bottom: 1px dashed #444444;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    line-height: 3rem;
+  }
+  .how-to ul li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+}
 @media (max-width: 800px) {
   .how-to ul li {
     border-bottom: 1px dashed #444444;
@@ -605,6 +617,12 @@ header .hero-section .side-hero .small-text {
   background: #ecf0f1;
   border-radius: 5px;
   margin: 5rem 0;
+}
+@media (max-width: 500px) {
+  .about {
+    width: 100%;
+    padding: 1.5rem;
+  }
 }
 .about .about-person {
   margin: 10rem 0;
@@ -757,11 +775,22 @@ header .hero-section .side-hero .small-text {
   font-weight: 300;
   margin-bottom: 2rem;
 }
+@media (max-width: 673px) {
+  .about h3 {
+    text-align: center;
+    font-size: 2.8rem;
+  }
+}
 .about p {
   font-size: 2rem;
   font-weight: 300;
   line-height: 4rem;
   margin: 1rem 0;
+}
+@media (max-width: 500px) {
+  .about p {
+    font-size: 1.6rem;
+  }
 }
 footer {
   margin-top: 5rem;
