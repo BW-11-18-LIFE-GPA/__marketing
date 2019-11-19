@@ -25,21 +25,6 @@
       line-height: 4rem;
       margin: 1rem 0;
     }
-
-    .col50 {
-      width: 50%;
-      .flex-col(center, flex-start);
-      border: 1px solid red;
-
-      img {
-        width: 100%;
-      }
-
-      p {
-        width: 100%;
-        margin: 0;
-      }
-    }
   }
 }
 
@@ -167,7 +152,7 @@
 .footer-cta-button {
   margin-bottom: 2rem;
   border-radius: 5px;
-  background: #3c1e76;
+  background: @primary;
   height: 7rem;
   width: 40%;
   font-weight: @medium;
@@ -175,7 +160,8 @@
   text-align: center;
   .flex-row(center, center);
   transition-duration: 300ms;
-  border: 1px solid #291262;
+  // border: 1px solid #291262;
+  border: 1px solid @primary-border;
 
   @media @tablet {
     width: 100%;
@@ -187,7 +173,7 @@
 
   &:hover {
     transition-property: background;
-    background: #291262;
+    background: @primary-border;
   }
 
   a {
