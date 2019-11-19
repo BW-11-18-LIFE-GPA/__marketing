@@ -1,3 +1,3 @@
 # Marketing Page for LifeGPA
 
-[Preview on Netlify](https://wizardly-beaver-c3aa95.netlify.com/)
+[Preview on Netlify](https://lifegpa-lambda.netlify.com/)
