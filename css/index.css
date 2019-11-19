@@ -162,9 +162,19 @@ html {
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
+@media (prefers-color-scheme: dark) {
+  html {
+    background: #1b1b1b;
+  }
+}
 html,
 body {
   font-family: "Roboto", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  body img {
+    opacity: 0.9;
+  }
 }
 .content-sep {
   margin-top: 10rem;
@@ -172,6 +182,11 @@ body {
   border-bottom: 0.5rem solid #6b6b6b;
   border-radius: 5px;
   width: 100%;
+}
+@media (prefers-color-scheme: dark) {
+  .content-sep {
+    opacity: 0.8;
+  }
 }
 .flex-wrap {
   flex-wrap: wrap;
@@ -251,6 +266,11 @@ header .tagline {
   margin-top: 1.7rem;
   color: #444444;
 }
+@media (prefers-color-scheme: dark) {
+  header .tagline {
+    color: #c4c4c4;
+  }
+}
 @media (max-width: 800px) {
   header .tagline {
     text-align: center;
@@ -271,6 +291,12 @@ header .hero-section {
   align-items: center;
   background: #fdfcd5;
   border-radius: 5px;
+}
+@media (prefers-color-scheme: dark) {
+  header .hero-section {
+    background: #fdfcd5;
+    opacity: 0.8;
+  }
 }
 @media (max-width: 800px) {
   header .hero-section {
@@ -433,6 +459,11 @@ header .hero-section .side-hero .small-text {
   border-radius: 5px;
   margin-bottom: 5rem;
 }
+@media (prefers-color-scheme: dark) {
+  .container .content-block {
+    opacity: 0.8;
+  }
+}
 .container .content-block h3 {
   font-size: 3.5rem;
   font-weight: 300;
@@ -469,6 +500,11 @@ header .hero-section .side-hero .small-text {
   margin: 10rem 0 5rem;
   text-align: center;
 }
+@media (prefers-color-scheme: dark) {
+  .bottom-content h3 {
+    color: #c4c4c4;
+  }
+}
 @media (max-width: 500px) {
   .bottom-content h3 {
     font-size: 3rem;
@@ -493,6 +529,11 @@ header .hero-section .side-hero .small-text {
   padding: 2% 5%;
   background: #fafafa;
   border-radius: 5px;
+}
+@media (prefers-color-scheme: dark) {
+  .how-to {
+    opacity: 0.8;
+  }
 }
 @media (max-width: 1000px) {
   .how-to {
@@ -611,6 +652,11 @@ header .hero-section .side-hero .small-text {
   color: #fafafa;
   text-decoration: none;
 }
+@media (prefers-color-scheme: dark) {
+  .footer-cta-button a {
+    color: #c4c4c4;
+  }
+}
 /* About Page */
 .about {
   padding: 5rem;
@@ -618,6 +664,11 @@ header .hero-section .side-hero .small-text {
   background: #ecf0f1;
   border-radius: 5px;
   margin: 5rem 0;
+}
+@media (prefers-color-scheme: dark) {
+  .about {
+    opacity: 0.8;
+  }
 }
 @media (max-width: 500px) {
   .about {
@@ -812,6 +863,11 @@ footer .footContent {
   height: 3rem;
   background: #6b6b6b;
 }
+@media (prefers-color-scheme: dark) {
+  footer .footContent {
+    background: #0e0e0e;
+  }
+}
 footer p {
   line-height: 3rem;
   font-size: 1.2rem;
@@ -820,6 +876,11 @@ footer a {
   color: #fafafa;
   text-decoration: none;
   transition-duration: 300ms;
+}
+@media (prefers-color-scheme: dark) {
+  footer a {
+    color: #c4c4c4;
+  }
 }
 footer a:hover {
   transition-property: opacity;

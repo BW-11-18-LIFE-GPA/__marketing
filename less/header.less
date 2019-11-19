@@ -28,6 +28,10 @@ header {
     margin-top: 1.7rem;
     color: #444444;
 
+    @media @darkmode {
+      color: @darkmode-primary-text;
+    }
+
     @media @tablet {
       text-align: center;
     }
@@ -45,6 +49,11 @@ header {
     .flex-row(space-around, center);
     background: #fdfcd5;
     border-radius: 5px;
+
+    @media @darkmode {
+      background: #fdfcd5;
+      opacity: 0.8;
+    }
 
     @media @tablet {
       .flex-col(center, center);
