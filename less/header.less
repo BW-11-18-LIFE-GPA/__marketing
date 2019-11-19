@@ -102,7 +102,8 @@ header {
 
       .grade-example {
         margin: 2rem 0;
-        color: #11c468;
+        // color: #11c468;
+        color: @green-dark;
         padding-left: 20%;
         font-size: 10rem;
 
@@ -151,14 +152,15 @@ header {
 .cta-button {
   .flex-row(center, center);
   border-radius: 5px;
-  background: #6bed90;
+  // background: #6bed90;
+  background: @green-dark;
   height: 7rem;
   width: 80%;
   font-weight: @medium;
   font-size: 3rem;
   text-align: center;
   transition-duration: 300ms;
-  border: 1px solid #088d63;
+  border: 1px solid @green-dark-border;
 
   @media @desktop {
     padding: 0 1.5%;
@@ -167,7 +169,7 @@ header {
 
   &:hover {
     transition-property: background;
-    background: #11c468;
+    background: @green-light;
   }
 
   a {
