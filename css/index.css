@@ -606,12 +606,32 @@ header .hero-section .side-hero .small-text {
   margin: 5rem 0;
 }
 .about .about-person {
+  margin: 10rem 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.about .about-person img {
-  width: 25%;
+.about .about-person .about-image {
+  width: 20%;
+}
+.about .about-person .about-image img {
+  width: 25rem;
+  min-width: 25rem;
+  min-height: 25rem;
+  height: 25rem;
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.about .about-person .about-content {
+  width: 75%;
+  margin-left: 5%;
+  border-left: 1px solid #d3a1f5;
+  padding-left: 5%;
+}
+.about h4 {
+  font-size: 3.5rem;
+  font-weight: 300;
 }
 .about h3 {
   font-size: 3.5rem;
