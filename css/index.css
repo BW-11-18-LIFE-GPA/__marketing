@@ -447,7 +447,7 @@ header .hero-section .side-hero .small-text {
 /* Icons */
 .hero-icon {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   align-items: center;
   font-size: 3rem;
 }
@@ -479,7 +479,8 @@ header .hero-section .side-hero .small-text {
 }
 .fa-user-cog,
 .fa-user-edit,
-.fa-check-circle {
+.fa-check-circle,
+.fa-user {
   color: #57988e;
 }
 .fa-notes-medical {
