@@ -6,6 +6,10 @@
   .flex-row(center, flex-start);
   .flex-wrap();
 
+  @media @phone {
+    width: 100%;
+  }
+
   .content-block {
     padding: 5rem;
     width: 90%;
@@ -15,6 +19,15 @@
 
     @media @darkmode {
       opacity: 0.9;
+    }
+
+    @media @tablet {
+      width: 100%;
+    }
+
+    @media @phone {
+      widith: 100%;
+      border-radius: 0;
     }
 
     h3 {
