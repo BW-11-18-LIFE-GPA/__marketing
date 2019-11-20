@@ -295,7 +295,7 @@ header .hero-section {
 @media (prefers-color-scheme: dark) {
   header .hero-section {
     background: #fdfcd5;
-    opacity: 0.8;
+    opacity: 0.9;
   }
 }
 @media (max-width: 800px) {
@@ -461,7 +461,7 @@ header .hero-section .side-hero .small-text {
 }
 @media (prefers-color-scheme: dark) {
   .container .content-block {
-    opacity: 0.8;
+    opacity: 0.9;
   }
 }
 .container .content-block h3 {
@@ -487,6 +487,11 @@ header .hero-section .side-hero .small-text {
 }
 .bottom-content img {
   width: 100%;
+}
+@media (prefers-color-scheme: dark) {
+  .bottom-content img {
+    opacity: 0.75;
+  }
 }
 @media (max-width: 500px) {
   .bottom-content img {
@@ -532,7 +537,7 @@ header .hero-section .side-hero .small-text {
 }
 @media (prefers-color-scheme: dark) {
   .how-to {
-    opacity: 0.8;
+    opacity: 1;
   }
 }
 @media (max-width: 1000px) {
@@ -667,7 +672,7 @@ header .hero-section .side-hero .small-text {
 }
 @media (prefers-color-scheme: dark) {
   .about {
-    opacity: 0.8;
+    opacity: 0.9;
   }
 }
 @media (max-width: 500px) {
@@ -709,6 +714,11 @@ header .hero-section .side-hero .small-text {
   width: 100%;
   border-radius: 50%;
   object-fit: cover;
+}
+@media (prefers-color-scheme: dark) {
+  .about .about-person .about-image img {
+    opacity: 1;
+  }
 }
 @media (max-width: 1625px) {
   .about .about-person .about-image img {
