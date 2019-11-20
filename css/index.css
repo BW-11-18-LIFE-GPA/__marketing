@@ -469,9 +469,31 @@ header .hero-section .side-hero .small-text {
 }
 .hero-icon p {
   margin-left: 1rem;
+  width: 90%;
+}
+.hero-icon i {
+  width: 5%;
 }
 .icon {
   margin-right: 1rem;
+}
+.fa-user-cog,
+.fa-user-edit,
+.fa-check-circle {
+  color: #57988e;
+}
+.fa-notes-medical {
+  color: #fc4e6e;
+}
+.fa-briefcase,
+.fa-list {
+  color: #6b6b6b;
+}
+.fa-heart {
+  color: #fc4e6e;
+}
+.fa-star {
+  color: #fdd497;
 }
 /* Buttons */
 .cta-button {
