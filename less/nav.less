@@ -1,7 +1,7 @@
-/* TOP NAVIGATION MENU */
+/* Top navigation menu */
 
 nav {
-  .flex-row(flex-start, center);
+  .flex-row(flex-start, center); // flexbox row left -> right, and centered
   width: 100%;
   height: 5rem;
   background: @secondary;
@@ -9,39 +9,22 @@ nav {
 
   a {
     color: @main-text;
-    text-decoration: none;
-    font-size: 1.6rem;
-    padding: 0 5%;
-    transition-duration: 300ms;
     font-weight: @light;
+    font-size: 1.6rem;
+    text-decoration: none;
+    padding: 0 5%;
+    transition-duration: 300ms; // how long will our transition to hover state be?
 
     &:last-child {
+      // remove left/right padding from last nav link and replace with left/right margin to fix offsetting of login button
       padding: 0;
       margin: 0 5%;
     }
 
     &:hover {
+      // our nav link hover state
       transition-property: color;
       color: @gray-dark;
     }
-  }
-}
-
-/* Buttons */
-.login {
-  background: @main-text;
-  height: 3rem;
-  width: 10rem;
-  min-width: 8rem;
-  line-height: 3rem;
-  border-radius: 5px;
-  color: #fafafa;
-  text-align: center;
-  transition-duration: 300ms;
-
-  &:hover {
-    transition-property: background, color;
-    background: #444444;
-    color: #fafafa;
   }
 }

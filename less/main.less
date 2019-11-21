@@ -1,32 +1,35 @@
-/* Main Content */
+/* This LESS file houses styling for the main content blocks of the website */
 
 .container {
-  margin: 0 auto;
+  .flex-row(center, flex-start); // flexbox row centered, starting from the top
+  .flex-wrap(); // apply flex-wrap to our container
   width: 80%;
-  .flex-row(center, flex-start);
-  .flex-wrap();
+  margin: 0 auto;
 
   @media @phone {
     width: 100%;
   }
 
+  // main content block
   .content-block {
-    padding: 5rem;
-    width: 90%;
     background: #ecf0f1;
-    border-radius: 5px;
+    width: 90%;
     margin-bottom: 5rem;
+    border-radius: 5px;
+    padding: 5rem;
 
     @media @darkmode {
+      // decrease the opacity of the main content block in dark mode
       opacity: 0.9;
     }
 
+    /* The following media queries adjust the content block depending on screen size */
     @media @tablet {
       width: 100%;
     }
 
     @media @phone {
-      widith: 100%;
+      width: 100%;
       border-radius: 0;
     }
 
@@ -36,6 +39,7 @@
       margin-bottom: 2rem;
 
       @media @phone {
+        // center our h3 text on screens smaller than 500px
         text-align: center;
       }
     }
@@ -49,114 +53,116 @@
   }
 }
 
+// bottom content block
 .bottom-content {
-  padding: 5rem;
+  .flex-col(center, center); // flexbox column centered both ways
   width: 90%;
-  border-radius: 5px;
   margin-bottom: 5rem;
-  .flex-col(center, center);
+  border-radius: 5px;
+  padding: 5rem;
 
   img {
     width: 100%;
 
     @media @darkmode {
+      // decrease image opacity to 75% in dark mode
       opacity: 0.75;
     }
 
     @media @phone {
-      margin-top: 3rem;
+      // increase width to 100% on screens smaller than 500px and add extra top margin
       width: 100%;
+      margin-top: 3rem;
     }
   }
 
   h3 {
+    margin: 10rem 0 5rem;
     font-size: 4.5rem;
     font-weight: @light;
-    margin: 10rem 0 5rem;
     text-align: center;
 
     @media @darkmode {
-      color: #c4c4c4;
+      color: #c4c4c4; // adjust the color of our h3 text in dark mode
     }
 
     @media @phone {
-      font-size: 3rem;
+      font-size: 3rem; // on screens smaller than 500px, we adjust our font size
     }
   }
 
   p {
+    margin: 1rem 0;
     font-size: 2rem;
     font-weight: @light;
     line-height: 4rem;
-    margin: 1rem 0;
   }
-}
-
-// Some structural classes
-.twoCol {
-  .flex-row(center, center);
 }
 
 // how-to list
 .how-to {
+  background: #fafafa;
+  margin: 5rem 5%;
+  border-radius: 5px;
+  padding: 2% 5%;
   font-size: 2.5rem;
   font-weight: @light;
   line-height: 6rem;
-  margin: 5rem 5%;
-  padding: 2% 5%;
-  background: #fafafa;
-  border-radius: 5px;
 
   @media @darkmode {
-    opacity: 1;
+    opacity: 1; // set opacity to 1 in darkmode to offset content block opacity in dark mode
   }
 
+  /* The following media queries adjust the 'how it works' / how-to list for mobile responsiveness */
   @media @desktop {
-    font-size: 2rem;
     width: 100%;
     margin: 0;
     margin-top: 3rem;
+    font-size: 2rem;
     line-height: 2rem;
   }
 
   @media @tablet {
-    font-size: 1.5rem;
     width: 100%;
     margin: 0;
     margin-top: 3rem;
+    font-size: 1.5rem;
     line-height: 2rem;
   }
 
   @media @phone {
-    font-size: 1.5rem;
     width: 100%;
     margin: 0;
     margin-top: 3rem;
+    font-size: 1.5rem;
     line-height: 4rem;
   }
 
   ul li {
+    // flexbox row left -> right, vertically centered
     .flex-row(flex-start, center);
 
+    /* The following media queries adjust the list items based on screen size for responsivenss */
     @media @desktop {
-      border-bottom: 1px dashed #444444;
       margin-bottom: 2rem;
+      border-bottom: 1px dashed #444444;
       padding-bottom: 2rem;
       line-height: 4rem;
 
       &:last-child {
+        // remove the bottom border from the last list item
         border-bottom: none;
         padding-bottom: 0;
       }
 
       i {
-        margin-right: 1rem;
+        margin-right: 1rem; // add some right margin to the icons
       }
     }
 
     @media (max-width: 1310px) {
-      border-bottom: 1px dashed #444444;
       margin-bottom: 2rem;
+      border-bottom: 1px dashed #444444;
       padding-bottom: 2rem;
       line-height: 3rem;
 
@@ -167,8 +173,8 @@
     }
 
     @media @tablet {
-      border-bottom: 1px dashed #444444;
       margin-bottom: 2rem;
+      border-bottom: 1px dashed #444444;
       padding-bottom: 2rem;
 
       &:last-child {
@@ -178,54 +184,18 @@
     }
 
     @media @phone {
-      border-bottom: 1px dashed #444444;
       margin-bottom: 2rem;
+      border-bottom: 1px dashed #444444;
       padding-bottom: 2rem;
+
       i {
-        display: none;
+        display: none; // remove the icons alltogether on screens smaller than 500px
       }
 
       &:last-child {
         border-bottom: none;
         padding-bottom: 0;
       }
-    }
-  }
-}
-
-// Buttons
-.footer-cta-button {
-  margin-bottom: 2rem;
-  border-radius: 5px;
-  background: @primary;
-  height: 7rem;
-  width: 40%;
-  font-weight: @medium;
-  font-size: 3rem;
-  text-align: center;
-  .flex-row(center, center);
-  transition-duration: 300ms;
-  border: 1px solid @primary-border;
-
-  @media @tablet {
-    width: 100%;
-  }
-
-  @media @phone {
-    width: 100%;
-  }
-
-  &:hover {
-    transition-property: background;
-    background: @primary-border;
-  }
-
-  a {
-    color: #fafafa;
-    text-decoration: none;
-
-    @media @darkmode {
-      color: #c4c4c4;
     }
   }
 }

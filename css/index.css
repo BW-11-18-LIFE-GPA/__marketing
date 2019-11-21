@@ -130,6 +130,8 @@ table {
   box-sizing: border-box;
   max-width: 100%;
 }
+/* This LESS file houses all of our escaped media queries for mobile
+   responsiveness, font stacks, color palette, etc. */
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
@@ -165,6 +167,11 @@ html {
 @media (prefers-color-scheme: dark) {
   html {
     background: #1b1b1b;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html html {
+    scroll-behavior: auto;
   }
 }
 html,
@@ -229,33 +236,8 @@ body {
     transform: translate(1px, -2px) rotate(-1deg);
   }
 }
-/* TOP NAVIGATION MENU */
-nav {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100%;
-  height: 5rem;
-  background: #d3a1f5;
-  padding-left: 10%;
-}
-nav a {
-  color: #2e343b;
-  text-decoration: none;
-  font-size: 1.6rem;
-  padding: 0 5%;
-  transition-duration: 300ms;
-  font-weight: 300;
-}
-nav a:last-child {
-  padding: 0;
-  margin: 0 5%;
-}
-nav a:hover {
-  transition-property: color;
-  color: #6b6b6b;
-}
-/* Buttons */
+/* This LESS file includes all button and icon styling that isn't explicitly
+   nested within a parent already */
 .login {
   background: #2e343b;
   height: 3rem;
@@ -272,22 +254,139 @@ nav a:hover {
   background: #444444;
   color: #fafafa;
 }
-header {
+.icon {
+  margin-right: 1rem;
+}
+@media (max-width: 1100px) {
+  .icon {
+    margin-right: 0.2rem;
+  }
+}
+/* The following classes apply to the specific icons on the homepage  */
+.fa-user-cog,
+.fa-user-edit,
+.fa-check-circle,
+.fa-user {
+  color: #57988e;
+}
+.fa-notes-medical,
+.fa-heart {
+  color: #b5294b;
+}
+.fa-briefcase,
+.fa-list {
+  color: #6b6b6b;
+}
+.fa-star {
+  color: #fdd497;
+}
+.cta-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: #57988e;
+  height: 7rem;
+  width: 80%;
+  font-weight: 500;
+  font-size: 3rem;
+  text-align: center;
+  transition-duration: 300ms;
+  border: 1px solid #3f827e;
+}
+@media (max-width: 1000px) {
+  .cta-button {
+    padding: 0 1.5%;
+    font-size: 2rem;
+  }
+}
+.cta-button:hover {
+  transition-property: background;
+  background: #83c1b1;
+}
+.cta-button a {
+  color: #fafafa;
+  text-decoration: none;
+}
+.footer-cta-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #945fcd;
+  width: 40%;
+  height: 7rem;
+  margin-bottom: 2rem;
+  border-radius: 5px;
+  border: 1px solid #7345b0;
+  font-weight: 500;
+  font-size: 3rem;
+  text-align: center;
+  transition-duration: 300ms;
+  /* The following media queries adjust the button sizing based on screen size */
+}
+@media (max-width: 800px) {
+  .footer-cta-button {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .footer-cta-button {
+    width: 100%;
+  }
+}
+.footer-cta-button:hover {
+  transition-property: background;
+  background: #7345b0;
+}
+.footer-cta-button a {
+  color: #fafafa;
+  text-decoration: none;
+}
+@media (prefers-color-scheme: dark) {
+  .footer-cta-button a {
+    color: #c4c4c4;
+  }
+}
+/* Top navigation menu */
+nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   width: 100%;
+  height: 5rem;
+  background: #d3a1f5;
+  padding-left: 10%;
+}
+nav a {
+  color: #2e343b;
+  font-weight: 300;
+  font-size: 1.6rem;
+  text-decoration: none;
+  padding: 0 5%;
+  transition-duration: 300ms;
+}
+nav a:last-child {
+  padding: 0;
+  margin: 0 5%;
+}
+nav a:hover {
+  transition-property: color;
+  color: #6b6b6b;
+}
+/* This LESS file houses all of the styling for the header section of the website. */
+header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
   margin-bottom: 5rem;
 }
-header img {
-  width: 500px;
-}
 header .logo {
+  margin-top: 10%;
+  color: #945fcd;
   font-size: 7rem;
   font-weight: 700;
-  color: #945fcd;
-  margin-top: 10%;
 }
 @media (max-width: 500px) {
   header .logo {
@@ -300,13 +399,13 @@ header .logo:hover {
   animation-iteration-count: infinite;
 }
 header .logo a {
-  text-decoration: none;
   color: #945fcd;
+  text-decoration: none;
 }
 header .tagline {
-  font-size: 3rem;
   margin-top: 1.7rem;
   color: #444444;
+  font-size: 3rem;
 }
 @media (prefers-color-scheme: dark) {
   header .tagline {
@@ -320,23 +419,22 @@ header .tagline {
 }
 @media (max-width: 500px) {
   header .tagline {
-    text-align: center;
     font-size: 2rem;
+    text-align: center;
   }
 }
 header .hero-section {
-  padding: 3%;
-  margin-top: 5rem;
-  width: 90%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   background: #fdfcd5;
+  width: 90%;
+  margin-top: 5rem;
   border-radius: 5px;
+  padding: 3%;
 }
 @media (prefers-color-scheme: dark) {
   header .hero-section {
-    background: #fdfcd5;
     opacity: 0.9;
   }
 }
@@ -374,6 +472,7 @@ header .hero-section img {
 }
 header .hero-section .side-hero {
   width: 40%;
+  /* The following media queries adjust the side-hero content section based on screen size */
 }
 @media (max-width: 1284px) {
   header .hero-section .side-hero div p {
@@ -397,33 +496,34 @@ header .hero-section .side-hero {
 }
 @media (max-width: 800px) {
   header .hero-section .side-hero {
-    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
   }
 }
 @media (max-width: 500px) {
   header .hero-section .side-hero {
-    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
   }
 }
 header .hero-section .side-hero p {
-  line-height: 5rem;
+  color: #444444;
   font-size: 3rem;
   font-weight: 300;
-  color: #444444;
+  line-height: 5rem;
 }
 header .hero-section .side-hero .grade-example {
   margin: 2rem 0;
-  color: #57988e;
   padding-left: 20%;
+  color: #57988e;
   font-size: 10rem;
+  /* The following media queries adjust the style of the 'A+ 96.5' grade example based on screen size */
 }
 @media (max-width: 1000px) {
   header .hero-section .side-hero .grade-example {
@@ -444,7 +544,6 @@ header .hero-section .side-hero .grade-example {
 header .hero-section .side-hero .small-text {
   font-size: 4rem;
 }
-/* Icons */
 .hero-icon {
   display: flex;
   justify-content: space-evenly;
@@ -453,84 +552,73 @@ header .hero-section .side-hero .small-text {
 }
 @media (max-width: 800px) {
   .hero-icon {
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
   }
 }
 @media (max-width: 500px) {
   .hero-icon {
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
   }
 }
 .hero-icon p {
   margin-left: 1rem;
   width: 90%;
+  /* The following media queries adjust the styling of the hero icon section
+      and its associated icons for different screen sizes */
+}
+@media (max-width: 800px) {
+  .hero-icon p {
+    width: 45%;
+    text-align: center;
+  }
+}
+@media (max-width: 545px) {
+  .hero-icon p {
+    width: 50%;
+  }
+}
+@media (max-width: 445px) {
+  .hero-icon p {
+    width: 55%;
+  }
+}
+@media (max-width: 370px) {
+  .hero-icon p {
+    width: 65%;
+  }
+}
+@media (max-width: 300px) {
+  .hero-icon p {
+    width: 75%;
+  }
 }
 .hero-icon i {
   width: 5%;
 }
-.icon {
-  margin-right: 1rem;
-}
-.fa-user-cog,
-.fa-user-edit,
-.fa-check-circle,
-.fa-user {
-  color: #57988e;
-}
-.fa-notes-medical,
-.fa-heart {
-  color: #b5294b;
-}
-.fa-briefcase,
-.fa-list {
-  color: #6b6b6b;
-}
-.fa-star {
-  color: #fdd497;
-}
-/* Buttons */
-.cta-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 5px;
-  background: #57988e;
-  height: 7rem;
-  width: 80%;
-  font-weight: 500;
-  font-size: 3rem;
-  text-align: center;
-  transition-duration: 300ms;
-  border: 1px solid #3f827e;
-}
-@media (max-width: 1000px) {
-  .cta-button {
-    padding: 0 1.5%;
+@media (max-width: 1100px) {
+  .hero-icon i {
     font-size: 2rem;
   }
 }
-.cta-button:hover {
-  transition-property: background;
-  background: #83c1b1;
+@media (max-width: 800px) {
+  .hero-icon i {
+    width: 1%;
+  }
 }
-.cta-button a {
-  color: #fafafa;
-  text-decoration: none;
-}
-/* Main Content */
+/* This LESS file houses styling for the main content blocks of the website */
 .container {
-  margin: 0 auto;
-  width: 80%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
+  width: 80%;
+  margin: 0 auto;
 }
 @media (max-width: 500px) {
   .container {
@@ -538,11 +626,12 @@ header .hero-section .side-hero .small-text {
   }
 }
 .container .content-block {
-  padding: 5rem;
-  width: 90%;
   background: #ecf0f1;
-  border-radius: 5px;
+  width: 90%;
   margin-bottom: 5rem;
+  border-radius: 5px;
+  padding: 5rem;
+  /* The following media queries adjust the content block depending on screen size */
 }
 @media (prefers-color-scheme: dark) {
   .container .content-block {
@@ -556,7 +645,7 @@ header .hero-section .side-hero .small-text {
 }
 @media (max-width: 500px) {
   .container .content-block {
-    widith: 100%;
+    width: 100%;
     border-radius: 0;
   }
 }
@@ -577,14 +666,14 @@ header .hero-section .side-hero .small-text {
   margin: 1rem 0;
 }
 .bottom-content {
-  padding: 5rem;
-  width: 90%;
-  border-radius: 5px;
-  margin-bottom: 5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 90%;
+  margin-bottom: 5rem;
+  border-radius: 5px;
+  padding: 5rem;
 }
 .bottom-content img {
   width: 100%;
@@ -596,14 +685,14 @@ header .hero-section .side-hero .small-text {
 }
 @media (max-width: 500px) {
   .bottom-content img {
-    margin-top: 3rem;
     width: 100%;
+    margin-top: 3rem;
   }
 }
 .bottom-content h3 {
+  margin: 10rem 0 5rem;
   font-size: 4.5rem;
   font-weight: 300;
-  margin: 10rem 0 5rem;
   text-align: center;
 }
 @media (prefers-color-scheme: dark) {
@@ -617,24 +706,20 @@ header .hero-section .side-hero .small-text {
   }
 }
 .bottom-content p {
+  margin: 1rem 0;
   font-size: 2rem;
   font-weight: 300;
   line-height: 4rem;
-  margin: 1rem 0;
-}
-.twoCol {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .how-to {
+  background: #fafafa;
+  margin: 5rem 5%;
+  border-radius: 5px;
+  padding: 2% 5%;
   font-size: 2.5rem;
   font-weight: 300;
   line-height: 6rem;
-  margin: 5rem 5%;
-  padding: 2% 5%;
-  background: #fafafa;
-  border-radius: 5px;
+  /* The following media queries adjust the 'how it works' / how-to list for mobile responsiveness */
 }
 @media (prefers-color-scheme: dark) {
   .how-to {
@@ -643,28 +728,28 @@ header .hero-section .side-hero .small-text {
 }
 @media (max-width: 1000px) {
   .how-to {
-    font-size: 2rem;
     width: 100%;
     margin: 0;
     margin-top: 3rem;
+    font-size: 2rem;
     line-height: 2rem;
   }
 }
 @media (max-width: 800px) {
   .how-to {
-    font-size: 1.5rem;
     width: 100%;
     margin: 0;
     margin-top: 3rem;
+    font-size: 1.5rem;
     line-height: 2rem;
   }
 }
 @media (max-width: 500px) {
   .how-to {
-    font-size: 1.5rem;
     width: 100%;
     margin: 0;
     margin-top: 3rem;
+    font-size: 1.5rem;
     line-height: 4rem;
   }
 }
@@ -672,11 +757,12 @@ header .hero-section .side-hero .small-text {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  /* The following media queries adjust the list items based on screen size for responsivenss */
 }
 @media (max-width: 1000px) {
   .how-to ul li {
-    border-bottom: 1px dashed #444444;
     margin-bottom: 2rem;
+    border-bottom: 1px dashed #444444;
     padding-bottom: 2rem;
     line-height: 4rem;
   }
@@ -690,8 +776,8 @@ header .hero-section .side-hero .small-text {
 }
 @media (max-width: 1310px) {
   .how-to ul li {
-    border-bottom: 1px dashed #444444;
     margin-bottom: 2rem;
+    border-bottom: 1px dashed #444444;
     padding-bottom: 2rem;
     line-height: 3rem;
   }
@@ -702,8 +788,8 @@ header .hero-section .side-hero .small-text {
 }
 @media (max-width: 800px) {
   .how-to ul li {
-    border-bottom: 1px dashed #444444;
     margin-bottom: 2rem;
+    border-bottom: 1px dashed #444444;
     padding-bottom: 2rem;
   }
   .how-to ul li:last-child {
@@ -713,8 +799,8 @@ header .hero-section .side-hero .small-text {
 }
 @media (max-width: 500px) {
   .how-to ul li {
-    border-bottom: 1px dashed #444444;
     margin-bottom: 2rem;
+    border-bottom: 1px dashed #444444;
     padding-bottom: 2rem;
   }
   .how-to ul li i {
@@ -723,44 +809,6 @@ header .hero-section .side-hero .small-text {
   .how-to ul li:last-child {
     border-bottom: none;
     padding-bottom: 0;
-  }
-}
-.footer-cta-button {
-  margin-bottom: 2rem;
-  border-radius: 5px;
-  background: #945fcd;
-  height: 7rem;
-  width: 40%;
-  font-weight: 500;
-  font-size: 3rem;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition-duration: 300ms;
-  border: 1px solid #7345b0;
-}
-@media (max-width: 800px) {
-  .footer-cta-button {
-    width: 100%;
-  }
-}
-@media (max-width: 500px) {
-  .footer-cta-button {
-    width: 100%;
-  }
-}
-.footer-cta-button:hover {
-  transition-property: background;
-  background: #7345b0;
-}
-.footer-cta-button a {
-  color: #fafafa;
-  text-decoration: none;
-}
-@media (prefers-color-scheme: dark) {
-  .footer-cta-button a {
-    color: #c4c4c4;
   }
 }
 /* About Page */
@@ -808,13 +856,14 @@ header .hero-section .side-hero .small-text {
   }
 }
 .about .about-person .about-image img {
-  width: 25rem;
   min-width: 25rem;
   min-height: 25rem;
+  width: 25rem;
   height: 25rem;
   width: 100%;
   border-radius: 50%;
   object-fit: cover;
+  /* The following media queries adjust the about images for mobile responsiveness */
 }
 @media (prefers-color-scheme: dark) {
   .about .about-person .about-image img {
@@ -867,8 +916,8 @@ header .hero-section .side-hero .small-text {
 }
 .about .about-person .about-content .pos {
   font-size: 1.8rem;
-  color: #945fcd;
   font-weight: 500;
+  color: #945fcd;
 }
 @media (max-width: 890px) {
   .about .about-person .about-content .pos {
@@ -885,13 +934,14 @@ header .hero-section .side-hero .small-text {
   background: #7345b0;
   width: 50%;
   margin-top: 4rem;
+  border-radius: 5px;
   padding: 2%;
   font-size: 2.4rem;
   font-weight: 300;
   color: #fafafa;
   text-align: center;
   transition-duration: 300ms;
-  border-radius: 5px;
+  /* Media queries for changing the size of the button based on screen size */
 }
 @media (max-width: 1122px) {
   .about .about-person .about-content .github {
@@ -917,6 +967,7 @@ header .hero-section .side-hero .small-text {
 .about h4 {
   font-size: 3.5rem;
   font-weight: 300;
+  /* The following media queries style the h4 title text based on screen size */
 }
 @media (max-width: 1000px) {
   .about h4 {
@@ -934,14 +985,15 @@ header .hero-section .side-hero .small-text {
   }
 }
 .about h3 {
+  margin-bottom: 2rem;
   font-size: 3.5rem;
   font-weight: 300;
-  margin-bottom: 2rem;
+  /* The following media queries style the h3 title text based on screen size */
 }
 @media (max-width: 673px) {
   .about h3 {
-    text-align: center;
     font-size: 2.8rem;
+    text-align: center;
   }
 }
 @media (max-width: 500px) {
@@ -950,36 +1002,37 @@ header .hero-section .side-hero .small-text {
   }
 }
 .about p {
+  margin: 1rem 0;
   font-size: 2rem;
   font-weight: 300;
   line-height: 4rem;
-  margin: 1rem 0;
 }
 @media (max-width: 500px) {
   .about p {
+    padding: 1rem;
     font-size: 1.6rem;
     text-align: justify;
-    padding: 1rem;
   }
 }
+/* This LESS file houses styling for the footer section of the website */
 footer {
+  width: 100%;
   margin-top: 5rem;
   color: #ffffff;
-  width: 100%;
 }
 footer .footHead {
+  background: #d3a1f5;
   width: 100%;
   height: 1.2rem;
-  background: #d3a1f5;
 }
 footer .footContent {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 0 5%;
+  background: #6b6b6b;
   width: 100%;
   height: 3rem;
-  background: #6b6b6b;
+  padding: 0 5%;
 }
 @media (prefers-color-scheme: dark) {
   footer .footContent {
@@ -987,8 +1040,8 @@ footer .footContent {
   }
 }
 footer p {
-  line-height: 3rem;
   font-size: 1.2rem;
+  line-height: 3rem;
 }
 footer a {
   color: #fafafa;

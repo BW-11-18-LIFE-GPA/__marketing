@@ -1,0 +1,121 @@
+/* This LESS file includes all button and icon styling that isn't explicitly
+   nested within a parent already */
+
+// Nav menu login button
+.login {
+  background: @main-text;
+  height: 3rem;
+  width: 10rem;
+  min-width: 8rem;
+  line-height: 3rem;
+  border-radius: 5px;
+  color: #fafafa;
+  text-align: center;
+  transition-duration: 300ms;
+
+  &:hover {
+    transition-property: background, color;
+    background: #444444;
+    color: #fafafa;
+  }
+}
+
+// Main Content Icons
+.icon {
+  margin-right: 1rem;
+
+  @media (max-width: 1100px) {
+    // decrease right margin on screens smaller than 1100px
+    margin-right: 0.2rem;
+  }
+}
+
+/* The following classes apply to the specific icons on the homepage  */
+.fa-user-cog,
+.fa-user-edit,
+.fa-check-circle,
+.fa-user {
+  color: @green-dark;
+}
+
+.fa-notes-medical,
+.fa-heart {
+  color: #b5294b;
+}
+
+.fa-briefcase,
+.fa-list {
+  color: @gray-dark;
+}
+
+.fa-star {
+  color: #fdd497;
+}
+
+// Call to Action Buttons
+.cta-button {
+  .flex-row(center, center);
+  border-radius: 5px;
+  // background: #6bed90;
+  background: @green-dark;
+  height: 7rem;
+  width: 80%;
+  font-weight: @medium;
+  font-size: 3rem;
+  text-align: center;
+  transition-duration: 300ms;
+  border: 1px solid @green-dark-border;
+
+  @media @desktop {
+    padding: 0 1.5%;
+    font-size: 2rem;
+  }
+
+  &:hover {
+    transition-property: background;
+    background: @green-light;
+  }
+
+  a {
+    color: #fafafa;
+    text-decoration: none;
+  }
+}
+
+// 'Join Today' call to action button in the footer
+.footer-cta-button {
+  .flex-row(center, center); // flexbox row centered both ways
+  background: @primary;
+  width: 40%;
+  height: 7rem;
+  margin-bottom: 2rem;
+  border-radius: 5px;
+  border: 1px solid @primary-border;
+  font-weight: @medium;
+  font-size: 3rem;
+  text-align: center;
+  transition-duration: 300ms;
+
+  /* The following media queries adjust the button sizing based on screen size */
+  @media @tablet {
+    width: 100%;
+  }
+
+  @media @phone {
+    width: 100%;
+  }
+
+  &:hover {
+    transition-property: background;
+    background: @primary-border;
+  }
+
+  a {
+    color: #fafafa;
+    text-decoration: none;
+
+    @media @darkmode {
+      color: #c4c4c4;
+    }
+  }
+}
