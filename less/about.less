@@ -1,6 +1,7 @@
 /* About Page */
 
 .about {
+  // about section
   padding: 5rem;
   width: 90%;
   background: #ecf0f1;
@@ -8,44 +9,51 @@
   margin: 5rem 0;
 
   @media @darkmode {
+    // set opacity for dark mode
     opacity: 0.9;
   }
 
   @media @phone {
+    // adjust width and padding for screens less than 500px
     width: 100%;
     padding: 1.5rem;
   }
 
+  // individual about person content block with picture and position
   .about-person {
     margin: 10rem 0;
     .flex-row(space-between, center);
 
     @media @desktop {
+      // center on screens below 1000px
       .flex-col(center, center);
     }
 
     .about-image {
-      // Team member about image
+      // team member about image
       width: 20%;
       .flex-row(center, center);
 
       @media @desktop {
+        // add additional bottom margin on screens below 1000px
         margin-bottom: 3rem;
       }
 
       img {
-        width: 25rem;
         min-width: 25rem;
         min-height: 25rem;
+        width: 25rem;
         height: 25rem;
         width: 100%;
         border-radius: 50%;
         object-fit: cover;
 
         @media @darkmode {
+          // set about image opacity back to full
           opacity: 1;
         }
 
+        /* The following media queries adjust the about images for mobile responsiveness */
         @media (max-width: 1625px) {
           width: 18rem;
           height: 18rem;
@@ -77,13 +85,14 @@
     }
 
     .about-content {
-      // Team member about description
+      // team member about description
       width: 75%;
       margin-left: 5%;
       border-left: 1px solid @secondary;
       padding-left: 5%;
 
       @media @desktop {
+        // remove the left border for the about content on screens smaller than 1000px
         border-left: none;
         margin-left: 0;
       }
@@ -91,31 +100,33 @@
       .pos {
         // team position title
         font-size: 1.8rem;
-        color: @primary;
         font-weight: @medium;
+        color: @primary;
 
         @media (max-width: 890px) {
-          display: block;
+          display: block; // force the team member position to a new line since we're in column view now
           margin-top: 1rem;
         }
 
         @media (max-width: 679px) {
-          font-size: 1.5rem;
+          font-size: 1.5rem; // decrease font size for responsiveness
         }
       }
 
       .github {
+        // github button on about page
         background: @primary-border;
         width: 50%;
         margin-top: 4rem;
+        border-radius: 5px;
         padding: 2%;
         font-size: 2.4rem;
         font-weight: @light;
         color: #fafafa;
         text-align: center;
         transition-duration: 300ms;
-        border-radius: 5px;
 
+        /* Media queries for changing the size of the button based on screen size */
         @media (max-width: 1122px) {
           width: 100%;
           padding-top: 5%;
@@ -144,6 +155,7 @@
     font-size: 3.5rem;
     font-weight: @light;
 
+    /* The following media queries style the h4 title text based on screen size */
     @media @desktop {
       text-align: center;
     }
@@ -158,13 +170,14 @@
   }
 
   h3 {
+    margin-bottom: 2rem;
     font-size: 3.5rem;
     font-weight: @light;
-    margin-bottom: 2rem;
 
+    /* The following media queries style the h3 title text based on screen size */
     @media (max-width: 673px) {
-      text-align: center;
       font-size: 2.8rem;
+      text-align: center;
     }
 
     @media @phone {
@@ -173,15 +186,16 @@
   }
 
   p {
+    margin: 1rem 0;
     font-size: 2rem;
     font-weight: @light;
     line-height: 4rem;
-    margin: 1rem 0;
 
+    // Format the paragraph text at our mobile phone breakpoint (500px)
     @media @phone {
+      padding: 1rem;
       font-size: 1.6rem;
       text-align: justify;
-      padding: 1rem;
     }
   }
 }

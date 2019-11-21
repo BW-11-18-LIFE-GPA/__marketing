@@ -3,16 +3,26 @@ html {
   scroll-behavior: smooth;
 
   @media @darkmode {
+    // dark mode background to enable if color preference is set to dark
     background: #1b1b1b;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    // remove smooth scrolling for individuals with motion sickness
+    html {
+      scroll-behavior: auto;
+    }
   }
 }
 
 html,
 body {
+  // main font stock
   font-family: @font-stack;
 }
 
 body {
+  // decrease opacity of all images when in dark mode
   @media @darkmode {
     img {
       opacity: 0.9;
@@ -21,6 +31,7 @@ body {
 }
 
 .content-sep {
+  // content separator to divide sections of content
   margin-top: 10rem;
   border-top: 0.5rem solid @secondary;
   border-bottom: 0.5rem solid @gray-dark;
@@ -28,6 +39,7 @@ body {
   width: 100%;
 
   @media @darkmode {
+    // decrease opacity of the content separator in dark mode
     opacity: 0.8;
   }
 }

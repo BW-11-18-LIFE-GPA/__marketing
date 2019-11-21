@@ -1,29 +1,33 @@
+/* This LESS file houses styling for the footer section of the website */
+
 footer {
+  width: 100%;
   margin-top: 5rem;
   color: #ffffff;
-  width: 100%;
 
   .footHead {
+    background: @secondary;
     width: 100%;
     height: 1.2rem;
-    background: @secondary;
   }
 
   .footContent {
+    // flexbox row starting from the right -> left, vertically centered
     .flex-row(flex-end, center);
-    padding: 0 5%;
+    background: @gray-dark;
     width: 100%;
     height: 3rem;
-    background: @gray-dark;
+    padding: 0 5%;
 
     @media @darkmode {
+      // change the background color of the footer content in dark mode
       background: rgb(14, 14, 14);
     }
   }
 
   p {
-    line-height: 3rem;
     font-size: 1.2rem;
+    line-height: 3rem;
   }
 
   a {
@@ -32,6 +36,7 @@ footer {
     transition-duration: 300ms;
 
     @media @darkmode {
+      // adjust font color in dark mode
       color: #c4c4c4;
     }
 
