@@ -7,12 +7,19 @@ LifeGPA is a free, easy to use tool that aids you in creating and maintaining po
 [Preview about page](https://lifegpa-lambda.netlify.com/about.html)
 
 
+
 ## What is this repository?
 This repository holds all of the contents for the marketing portion of LifeGPA, which includes the landing page and about page detailing the team members and their respective roles and position on the team.
+
 
 ## Dependencies Used
 - LESS for CSS preprocessing <http://lesscss.org/>
 
+
 ## Attributions / Resources Used
 - Icons from FontAwesome <http://fontawesome.com>
 - Vectors from icons8 <https://icons8.com/ouch>
+
+
+## Original Mockup / Wireframe
+![alt text](https://i.imgur.com/lp4QgNo.png "Original Wireframe")
